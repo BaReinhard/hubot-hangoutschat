@@ -83,21 +83,7 @@ class HangoutsChat extends Adapter {
         });
 
         const threadKey = event.message.thread.name.split("/").pop();
-
-        const annotations = event.message.annotations;
-        let botName = "";
-        annotations.forEach(annotation => {
-          if (annotation.type === "USER_MENTION" && annotation.userMention.user.type === "BOT") {
-            botName = annotation.userMention.user.displayName;
-          }
-          botName =
-            annotations && annotations.listener > 0 && annotations[0].userMention.user.displayName;
-        });
-        const message = new TextMessage(
-          user,
-          botName !== "" ? event.message.text.replace(`@`, "") : event.message.text,
-          threadKey
-        );
+        const message = new TextMessage(user, event.message.text, threadKey);
         this.receive(message);
         break;
     }
