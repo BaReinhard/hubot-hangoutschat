@@ -27,7 +27,10 @@ class HangoutsChat extends Adapter {
             url: `https://chat.googleapis.com/v1/spaces/${envelope.room}/messages`,
             method: 'post',
             data: {
-                text: lines.join('\n')
+                text: lines.join('\n'),
+                thread: {
+                    name: `spaces/${envelope.room}/threads/${envelope.message.id}`
+                }
             }
         });
     }
