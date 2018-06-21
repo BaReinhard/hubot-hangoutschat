@@ -1,5 +1,5 @@
 {
-  "name": "hubot-hangoutschat",
+  "name": "hubot-hangoutschat-gae",
   "version": "1.0.0",
   "description": "Hubot driver for Hangouts Chat",
   "main": "./src/hangoutschat.js",
@@ -15,6 +15,5 @@
   "peerDependencies": {
     "hubot": ">=2.0"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
