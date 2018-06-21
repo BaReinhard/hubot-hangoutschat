@@ -1,12 +1,12 @@
 {
-  "name": "hubot-hangoutschat",
+  "name": "hubot-hangoutschat-rooms",
   "version": "1.0.0",
-  "description": "Hubot driver for Hangouts Chat",
+  "description": "Hubot driver for Hangouts Chat with Proper Threadding and Room Availability",
   "main": "./src/hangoutschat.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Teoni Valois <teonivalois@gmail.com>",
+  "author": "Brett Reinhard <brett@reinhards.us>",
   "license": "ISC",
   "dependencies": {
     "google-auth-library": "^1.4.0",
@@ -15,6 +15,5 @@
   "peerDependencies": {
     "hubot": ">=2.0"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
